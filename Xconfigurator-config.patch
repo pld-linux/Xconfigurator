@@ -1,0 +1,20 @@
+diff -ur Xconfigurator-4.2.3.orig/pci-probing/Makefile Xconfigurator-4.2.3/pci-probing/Makefile
+--- Xconfigurator-4.2.3.orig/pci-probing/Makefile	Thu Oct  8 21:49:24 1998
++++ Xconfigurator-4.2.3/pci-probing/Makefile	Tue Jul 13 16:33:18 1999
+@@ -1,5 +1,5 @@
+-DEBUGFLAGS = -g
+-CC = egcs
++DEBUGFLAGS = $(RPM_OPT_FLAGS)
++CC = gcc
+ CFLAGS     = -Wall $(DEBUGFLAGS) $(INCLUDEPATH) -D_GNU_SOURCE=1 -O
+ LDFLAGS    = $(LIBPATH)
+ 
+diff -ur Xconfigurator-4.2.3.orig/sbus-probing/Makefile Xconfigurator-4.2.3/sbus-probing/Makefile
+--- Xconfigurator-4.2.3.orig/sbus-probing/Makefile	Thu Feb 18 17:30:53 1999
++++ Xconfigurator-4.2.3/sbus-probing/Makefile	Tue Jul 13 16:33:05 1999
+@@ -1,4 +1,4 @@
+-DEBUGFLAGS = -g
++DEBUGFLAGS = $(RPM_OPT_FLAGS)
+ CFLAGS     = -Wall $(DEBUGFLAGS) $(INCLUDEPATH) -D_GNU_SOURCE=1
+ LDFLAGS    = $(LIBPATH)
+ 
