@@ -1,16 +1,20 @@
 Summary:	Red Hat X Window System Configuration tool
 Summary(pl):	Narzêdzie do konfiguracji X Window System
 Name:		Xconfigurator
-Version:	4.2.3
+Version:	4.10.7
 Release:	1
 License:	distributable
 Group:		X11/Applications
-Source0:	%{name}-%{version}.tar.gz
-Patch0:		%{name}-config.patch
+Source0:	%{name}-%{version}.tar.bz2
+#Patch0:		%{name}-config.patch
+Patch1:		%{name}-kudzu.patch
 Requires:	XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
 #Requires:	initscripts >= 3.60
 ExcludeArch:	sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	gdk-pixbuf-devel
+BuildRequires:	kudzu-devel
+BuildRequires:	gnome-libs-devel
 
 %define		_prefix	/usr/X11R6
 %define		_mandir	/usr/X11R6/man
@@ -30,7 +34,8 @@ przyjemniejszy interfejs i jest ³atwiejszy w obs³udze.
 
 %prep
 %setup -q
-%patch -p1
+#%patch0 -p1
+%patch1 -p1
 
 %build
 %{__make}
