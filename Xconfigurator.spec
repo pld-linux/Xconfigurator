@@ -40,7 +40,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 
 strip Xconfigurator
-make PREFIX=$RPM_BUILD_ROOT install
+%{__make} PREFIX=$RPM_BUILD_ROOT install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README TODO
