@@ -38,7 +38,7 @@ strip Xconfigurator
 rm -rf $RPM_BUILD_ROOT
 make PREFIX=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/Xconfigurator.1x
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/Xconfigurator.1x
 gzip -9nf README TODO
 
 %clean
