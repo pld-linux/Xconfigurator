@@ -41,26 +41,17 @@ make PREFIX=$RPM_BUILD_ROOT install
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/Xconfigurator.1x
 gzip -9nf README TODO
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {README,TODO}.gz
 %attr(755,root,root) /usr/X11R6/bin/Xconfigurator
 /usr/X11R6/share/Xconfigurator
 /usr/X11R6/man/man1/Xconfigurator.1x.gz
-%lang(cs) /usr/X11R6/share/locale/cs/LC_MESSAGES/Xconfigurator.mo
-%lang(da) /usr/X11R6/share/locale/da/LC_MESSAGES/Xconfigurator.mo
-%lang(de) /usr/X11R6/share/locale/de/LC_MESSAGES/Xconfigurator.mo
-%lang(en) /usr/X11R6/share/locale/en*/LC_MESSAGES/Xconfigurator.mo
-%lang(fi) /usr/X11R6/share/locale/fi/LC_MESSAGES/Xconfigurator.mo
-%lang(fr) /usr/X11R6/share/locale/fr/LC_MESSAGES/Xconfigurator.mo
-%lang(no) /usr/X11R6/share/locale/no/LC_MESSAGES/Xconfigurator.mo
-%lang(pt) /usr/X11R6/share/locale/pt*/LC_MESSAGES/Xconfigurator.mo
-%lang(ro) /usr/X11R6/share/locale/ro/LC_MESSAGES/Xconfigurator.mo
-%lang(sk) /usr/X11R6/share/locale/sk/LC_MESSAGES/Xconfigurator.mo
-%lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/Xconfigurator.mo
 
 %changelog
 * Sat Jan 23 1999 Micha³ Kuratczyk <kurkens@polbox.com>
