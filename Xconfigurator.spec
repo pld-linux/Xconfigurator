@@ -11,7 +11,7 @@ Patch:		Xconfigurator-config.patch
 Requires:	XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
 #Requires:	initscripts >= 3.60
 ExcludeArch:	sparc
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix	/usr/X11R6
 %define		_mandir	/usr/X11R6/man
