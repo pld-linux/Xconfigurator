@@ -38,17 +38,18 @@ strip Xconfigurator
 rm -rf $RPM_BUILD_ROOT
 make PREFIX=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILDROOT/usr/man/man1/Xconfigurator.1x
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/Xconfigurator.1x
+gzip -9nf README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
-%doc README TODO
+%defattr(644,root,root,755)
+%doc {README,TODO}.gz
 %attr(755, root, root) /usr/X11R6/bin/Xconfigurator
 /usr/X11R6/share/Xconfigurator
-%attr(644, root,  man) /usr/X11R6/man/man1/Xconfigurator.1x
+/usr/X11R6/man/man1/Xconfigurator.1x.gz
 %lang(cs) /usr/X11R6/share/locale/cs/LC_MESSAGES/Xconfigurator.mo
 %lang(da) /usr/X11R6/share/locale/da/LC_MESSAGES/Xconfigurator.mo
 %lang(de) /usr/X11R6/share/locale/de/LC_MESSAGES/Xconfigurator.mo
