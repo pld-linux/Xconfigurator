@@ -1,17 +1,20 @@
-Summary:     Red Hat X Window System Configuration tool
-Summary(pl): Narzêdzie do konfiguracji X Window System
-Name:        Xconfigurator
-Version:     3.84
-Release:     3
-Copyright:   distributable
-Group:       X11/Utilities
-Group(pl):   X11/Narzêdzia
-Source:      %{name}-%{version}.tar.gz
-Patch:       Xconfigurator-config.patch
-Requires:    XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
-Requires:    initscripts >= 3.60
-ExcludeArch: sparc
+Summary:	Red Hat X Window System Configuration tool
+Summary(pl):	Narzêdzie do konfiguracji X Window System
+Name:		Xconfigurator
+Version:	4.2.3
+Release:	1
+Copyright:	distributable
+Group:		X11/Utilities
+Group(pl):	X11/Narzêdzia
+Source:		%{name}-%{version}.tar.gz
+Patch:		Xconfigurator-config.patch
+Requires:	XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
+#Requires:	initscripts >= 3.60
+ExcludeArch:	sparc
 BuildRoot:	/tmp/%{name}-%{version}-root
+
+%define		_prefix	/usr/X11R6
+%define		_mandir	/usr/X11R6/man
 
 %description
 This is the Red Hat X Configuration tool.  It is based on the sources
@@ -50,5 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {README,TODO}.gz
 %attr(755,root,root) /usr/X11R6/bin/Xconfigurator
+%attr(755,root,root) /usr/X11R6/bin/Xtest
 /usr/X11R6/share/Xconfigurator
 /usr/X11R6/man/man1/Xconfigurator.1x.gz
