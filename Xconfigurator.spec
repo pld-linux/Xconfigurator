@@ -40,7 +40,6 @@ przyjemniejszy interfejs i jest ³atwiejszy w obs³udze.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-strip Xconfigurator
 %{__make} PREFIX=$RPM_BUILD_ROOT install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
