@@ -6,7 +6,10 @@ Release:	1
 License:	distributable
 Group:		X11/Applications
 Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Requires:	XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
