@@ -11,7 +11,7 @@ Patch:       Xconfigurator-config.patch
 Requires:    XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
 Requires:    initscripts >= 3.60
 ExcludeArch: sparc
-BuildRoot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 This is the Red Hat X Configuration tool.  It is based on the sources
