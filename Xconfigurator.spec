@@ -47,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {README,TODO}.gz
-%attr(755, root, root) /usr/X11R6/bin/Xconfigurator
+%attr(755,root,root) /usr/X11R6/bin/Xconfigurator
 /usr/X11R6/share/Xconfigurator
 /usr/X11R6/man/man1/Xconfigurator.1x.gz
 %lang(cs) /usr/X11R6/share/locale/cs/LC_MESSAGES/Xconfigurator.mo
