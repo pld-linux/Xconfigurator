@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzie do konfiguracji X Window System
 Name:		Xconfigurator
 Version:	4.2.3
 Release:	1
-Copyright:	distributable
+License:	distributable
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
@@ -42,8 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} PREFIX=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README TODO
+gzip -9nf README TODO
 
 %find_lang %{name}
 
@@ -56,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/Xconfigurator
 %attr(755,root,root) %{_bindir}/Xtest
 %{_datadir}/Xconfigurator
-%{_mandir}/man1/Xconfigurator.1x.gz
+%{_mandir}/man1/Xconfigurator.1x*
