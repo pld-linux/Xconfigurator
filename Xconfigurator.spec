@@ -4,10 +4,11 @@ Name:		Xconfigurator
 Version:	4.2.3
 Release:	1
 Copyright:	distributable
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	%{name}-%{version}.tar.gz
-Patch0:		Xconfigurator-config.patch
+Patch0:		%{name}-config.patch
 Requires:	XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
 #Requires:	initscripts >= 3.60
 ExcludeArch:	sparc
