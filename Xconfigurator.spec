@@ -1,9 +1,11 @@
-Summary:     Red Hat X Window System Configuration tool.
+Summary:     Red Hat X Window System Configuration tool
+Summary(pl): Narzêdzie do konfiguracji X Window System
 Name:        Xconfigurator
 Version:     3.84
-Release:     2
+Release:     3
 Copyright:   distributable
 Group:       X11/Utilities
+Group(pl):   X11/Narzêdzia
 Source:      %{name}-%{version}.tar.gz
 Patch:       Xconfigurator-config.patch
 Requires:    XFree86 >= 3.3.2,  kbdconfig, mouseconfig >= 2.8, kbd
@@ -19,6 +21,11 @@ added to make it easier for the end user.
 NOTE - use mouseconfig to change your mouse type, then re-run Xconfigurator
 to set X up for your new mouse type.
 
+%description -l pl
+Narzêdzie do konfiguracji X Window System stworzone przez firmê Red Hat
+Software. Jest oparte na xf86config - narzêdziu z XFree86. Ma
+przyjemniejszy interfejs i jest ³atwiejszy w obs³udze.
+
 %prep
 %setup -q
 %patch -p1
@@ -30,6 +37,8 @@ strip Xconfigurator
 %install
 rm -rf $RPM_BUILD_ROOT
 make PREFIX=$RPM_BUILD_ROOT install
+
+gzip -9nf $RPM_BUILDROOT/usr/man/man1/Xconfigurator.1x
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,6 +62,11 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/Xconfigurator.mo
 
 %changelog
+* Sat Jan 23 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+  [3.84-3]
+- added pl translation
+- added gzipping man page
+
 * Fri Nov 13 1998 Preston Brown <pbrown@redhat.com>
 - adjusted FontPath entries
 
