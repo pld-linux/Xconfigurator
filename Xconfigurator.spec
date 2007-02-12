@@ -1,5 +1,5 @@
 Summary:	Red Hat X Window System Configuration tool
-Summary(pl.UTF-8):   Narzędzie do konfiguracji X Window System
+Summary(pl.UTF-8):	Narzędzie do konfiguracji X Window System
 Name:		Xconfigurator
 Version:	4.10.7
 Release:	1
