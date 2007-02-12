@@ -1,5 +1,5 @@
 Summary:	Red Hat X Window System Configuration tool
-Summary(pl):	Narzêdzie do konfiguracji X Window System
+Summary(pl.UTF-8):   NarzÄ™dzie do konfiguracji X Window System
 Name:		Xconfigurator
 Version:	4.10.7
 Release:	1
@@ -31,10 +31,10 @@ added to make it easier for the end user.
 NOTE - use mouseconfig to change your mouse type, then re-run
 Xconfigurator to set X up for your new mouse type.
 
-%description -l pl
-Narzêdzie do konfiguracji X Window System stworzone przez firmê Red
-Hat Software. Jest oparte na xf86config - narzêdziu z XFree86. Ma
-przyjemniejszy interfejs i jest ³atwiejszy w obs³udze.
+%description -l pl.UTF-8
+NarzÄ™dzie do konfiguracji X Window System stworzone przez firmÄ™ Red
+Hat Software. Jest oparte na xf86config - narzÄ™dziu z XFree86. Ma
+przyjemniejszy interfejs i jest Å‚atwiejszy w obsÅ‚udze.
 
 %prep
 %setup -q
